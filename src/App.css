@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10111b;
+  color: #f5f5f5;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #261747, #141522);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 38px;
+  color: #c4a7ff;
+}
+
+.header p {
+  color: #c4c4d4;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.add-section,
+.movies-section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #d4c3ff;
+}
+
+.movie-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 20px;
+  background: #1b1c2b;
+  border-radius: 12px;
+}
+
+.movie-form input,
+.movie-form textarea,
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #39394f;
+  border-radius: 8px;
+  background: #252638;
+  color: white;
+  font: inherit;
+}
+
+.movie-form textarea {
+  resize: vertical;
+  min-height: 45px;
+}
+
+.movie-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #9670f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.movie-form button:hover {
+  background: #7b51dc;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.results {
+  color: #b9b9ce;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.movie-card {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #1b1c2b;
+  border: 1px solid #303146;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 16px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+  color: #d4c3ff;
+}
+
+.movie-info p {
+  color: #c3c3d2;
+  line-height: 1.6;
+}
+
+.rating {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ffd477;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .movie-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .movie-list,
+  .movie-form,
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-poster {
+    height: 300px;
+  }
+}
